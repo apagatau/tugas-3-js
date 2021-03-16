@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan 2</title>
+  </head>
+  <body>
+    Bil 1 :
+    <!-- menginput text box angka pertama yang akan digunakan-->
+    <input type="number" id="bil1">
+    <br><br>
+    Bil 2 :
+    <!-- menginput text box angka kedua yang akan digunakan-->
+    <input type="number" id="bil2">
+    <br><br>
+    <!-- menginput button tombol tambah yang akan digunakan-->
+    <input type="button" name="button_tambah" value="+" onclick="tambah()">
+    <!-- menginput button tombol kurang yang akan digunakan-->
+    <input type="button" name="button_kurang" value="-" onclick="kurang()">
+    <!-- menginput button tombol kali yang akan digunakan-->
+    <input type="button" name="button_kali" value="x" onclick="kali()">
+    <!-- menginput button tombol bagi yang akan digunakan-->
+    <input type="button" name="button_bagi" value="/" onclick="bagi()">
+    <br><br>
+    Hasil :
+    <!-- menginput box untuk hasil dari penghitungan-->
+    <input type="text" name="" value="" readonly id="hasil">
+    <br>
+    <p id="last_change"></p>
+    <script language="javascript">
+      // memanggil function untuk melakukan penjumlahan
+      function tambah()
+      {
+        // membulatkan bilangan dan mengambil value dari bil1 dan bil2
+        bil1 = parseInt(document.getElementById("bil1").value);
+        bil2 = parseInt(document.getElementById("bil2").value);
+        hasil = bil1+bil2; // output : hasil penjumlahan
+        last = "Dimodifikasi terakhir pada " + document.lastModified;
+        // mengambil value dari variabel hasil
+        document.getElementById("hasil").value = hasil;
+        // mengambil value dari variabel last
+        document.getElementById("last_change").innerHTML = last;
+      }
+      // memanggil function untuk melakukan pengurangan
+      function kurang()
+      {
+        // membulatkan bilangan dan mengambil value dari bil1 dan bil2
+        bil1 = parseInt(document.getElementById("bil1").value);
+        bil2 = parseInt(document.getElementById("bil2").value);
+        hasil = bil1-bil2; // output : hasil pengurangan
+        last = "Dimodifikasi terakhir pada " + document.lastModified;
+        // mengambil value dari variabel hasil
+        document.getElementById("hasil").value = hasil;
+        // mengambil value dari variabel last
+        document.getElementById("last_change").innerHTML = last;
+      }
+      // memanggil function untuk melakukan perkalian
+      function kali()
+      {
+        // membulatkan bilangan dan mengambil value dari bil1 dan bil2
+        bil1 = parseInt(document.getElementById("bil1").value);
+        bil2 = parseInt(document.getElementById("bil2").value);
+        hasil = bil1*bil2; // output : hasil perkalian
+        last = "Dimodifikasi terakhir pada " + document.lastModified;
+        // mengambil value dari variabel hasil
+        document.getElementById("hasil").value = hasil;
+        // mengambil value dari variabel last
+        document.getElementById("last_change").innerHTML = last;
+      }
+      // memanggil function untuk melakukan pembagian
+      function bagi()
+      {
+        // membulatkan bilangan dan mengambil value dari bil1 dan bil2
+        bil1 = parseInt(document.getElementById("bil1").value);
+        bil2 = parseInt(document.getElementById("bil2").value);
+        hasil = bil1/bil2; // output : hasil pembagian
+        last = "Dimodifikasi terakhir pada " + document.lastModified;
+        // mengambil value dari variabel hasil
+        document.getElementById("hasil").value = hasil;
+        // mengambil value dari variabel last
+        document.getElementById("last_change").innerHTML = last;
+      }
+    </script>
+  </body>
+</html>

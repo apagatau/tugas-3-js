@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan 1</title>
+  </head>
+  <body>
+    <!--menginput button cek nilai-->
+    <input type="button" name="cek" value="Cek Nilai" onclick="cek()">
+    <script>
+      // memanggil function untuk melakukan cek nilai
+      function cek()
+      {
+        nilai = window.prompt("Masukkan Nilai (0-100) : ");
+        hasil = "";
+        // apabila nilai lebih dari 100 dan kurang dari 0
+        if (nilai > 100 || nilai < 0) {
+          hasil = "Nilai anda tidak valid";
+        // apabila nilai lebih dari 80
+        }else if (nilai > 80) {
+          hasil = "A";
+        // Apabila nilai lebih dari 70
+        }else if (nilai > 70) {
+          hasil = "AB";
+        // Apabila nilai lebih dari 65
+        }else if (nilai > 65) {
+          hasil = "B";
+        // Apabila nilai lebih dari dari 60
+        }else if (nilai > 60) {
+          hasil = "BC";
+        // Apabila nilai lebih dari 55
+        }else if (nilai > 55) {
+          hasil = "C";
+        // Apabila nilai lebih dari 40
+        }else if (nilai > 40) {
+          hasil = "D";
+        // Apabila nilai kurang dari 40
+        }else {
+          hasil = "E";
+        }
+        // menampilkan pesan melalui alert box
+        alert("Nilai anda "+hasil);
+        // output : Nilai anda ...(Nilai yang dimasukkan)
+      }
+    </script>
+  </body>
+</html>
